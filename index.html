@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>轮播图</title>
+    <style>
+        #parent {
+            position: relative;
+            margin: 50px auto;
+            padding: 0;
+            width: 500px;
+            height: 309px;
+        }
+
+        #uls {
+            position: relative;
+            margin: 0;
+            padding: 0;
+            width: 500px;
+            height: 309px;
+            overflow: hidden;
+        }
+
+        #img_ul {
+            position: absolute;
+            margin: 0;
+            padding: 0;
+            left: 0;
+            top: 0;
+            width: 3000px;
+            /*多留出一张图片的宽度！*/
+            list-style: none;
+        }
+
+        #img_ul li {
+            float: left;
+            margin: 0;
+            padding: 0;
+            width: 500px;
+            height: 309px;
+        }
+
+        #img_ul li img {
+            width: 500px;
+            height: 309px;
+        }
+
+        #litCir_ul {
+            position: absolute;
+            margin: 0;
+            padding: 0;
+            right: 10px;
+            bottom: 10px;
+            list-style: none;
+        }
+
+        #litCir_ul li {
+            margin: 0;
+            padding: 0;
+            float: left;
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            line-height: 20px;
+            border-radius: 50%;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+
+        li.active {
+            background-color: greenyellow;
+        }
+
+        li.quiet {
+            background-color: #1e90ff;
+        }
+    </style>
+    <script src="./node_modules/react/umd/react.production.min.js"></script>
+    <script src="./node_modules/react-dom/umd/react-dom.production.min.js"></script>
+    <script type="importmap">
+        {
+          "imports": {
+            "react": "/lib/react.js",
+            "react-dom": "/lib/react-dom.js"
+          }
+        }
+      </script>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script src="./index.js" type="module"></script>
+</body>
+
+</html>
